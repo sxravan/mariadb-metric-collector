@@ -4,5 +4,9 @@ github.com/go-sql-driver/mysql v1.8.1 h1:LedoTUt/eveggdHS9qUFC1EFSa8bU2+1pZjSRpv
 github.com/go-sql-driver/mysql v1.8.1/go.mod h1:wEBSXgmK//2ZFJyE+qWnIsVGmvmEKlqwuVSjsCm7DZg=
 github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
 github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
-github.com/sxravan/mariadb-metric-collector/config v0.0.0-20250131040332-197946be389e h1:qjMOd/iV9fo9oInJgZfthoa6pOgoo4ah7GUXiwGkMNg=
-github.com/sxravan/mariadb-metric-collector/config v0.0.0-20250131040332-197946be389e/go.mod h1:2ygRud0GkxjitQUKyRHV1Ug5xcSyBYQK908Njp1S/w4=
+github.com/sxravan/mariadb-metric-collector/collector v0.0.2 h1:NoS+C3fcePGrZaJWj9IiC8TUxIxIUDYO1P4jlG7vec0=
+github.com/sxravan/mariadb-metric-collector/collector v0.0.2/go.mod h1:f6ucH27e9AgfXjpLYF0a6Ws6S7RrPuL2MRiU0XN5seg=
+github.com/sxravan/mariadb-metric-collector/config v0.0.1 h1:gdxJvXB6tsOdcWhEjSIC+ODhqZcetx2DUHB7Qato/38=
+github.com/sxravan/mariadb-metric-collector/config v0.0.1/go.mod h1:2ygRud0GkxjitQUKyRHV1Ug5xcSyBYQK908Njp1S/w4=
+github.com/sxravan/mariadb-metric-collector/db v0.0.3 h1:cG96LXDnYeYuj2SHUMfV6b/fXInfE3E3uIcBbLkMyW4=
+github.com/sxravan/mariadb-metric-collector/db v0.0.3/go.mod h1:xOI3x8qZgrGej8s0bnj6x2BnUDqmny1GTPrr5bk+YJw=

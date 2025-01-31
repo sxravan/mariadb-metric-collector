@@ -1,0 +1,11 @@
+[
+    {
+      "title": "Buffer Pool Read Ratio",
+      "query": "SELECT ROUND((SUM(CASE WHEN VARIABLE_NAME = 'INNODB_BUFFER_POOL_READS' THEN VARIABLE_VALUE ELSE 0 END)/SUM(CASE WHEN VARIABLE_NAME = 'INNODB_BUFFER_POOL_READ_REQUESTS' THEN VARIABLE_VALUE ELSE 0 END)),4) AS buffer_pool_read_ratio FROM INFORMATION_SCHEMA.GLOBAL_STATUS WHERE VARIABLE_NAME IN ('INNODB_BUFFER_POOL_READS', 'INNODB_BUFFER_POOL_READ_REQUESTS');"
+    },
+    {
+      "title": "Total Connections",
+      "query": "SELECT COUNT(*) AS total_connections FROM information_schema.processlist;"
+    }
+]
+

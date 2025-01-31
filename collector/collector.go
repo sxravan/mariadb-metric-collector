@@ -3,6 +3,7 @@ package collector
 import (
 	"database/sql"
 	"fmt"
+	"log"
 )
 
 type Metric struct {
@@ -42,4 +43,35 @@ func CollectMetrics(db *sql.DB) ([]Metric, error) {
 	}
 
 	return metrics, nil
+}
+
+func ExecuteQuery(db *sql.DB, query []Query) {
+	for _, q := range query {
+		// Execute the query and get a result set
+		rows, err := db.Query(q.Query)
+		if err != nil {
+			log.Printf("Error executing query [%s]: %v", q.Title, err)
+			continue
+		}
+		defer rows.Close()
+
+		// Iterate over the rows returned by the query
+		for rows.Next() {
+			var result string
+			// Scan the values into the result variable (change this based on the expected type of your result)
+			err := rows.Scan(&result)
+			if err != nil {
+				log.Printf("Error scanning row for query [%s]: %v", q.Title, err)
+				continue
+			}
+
+			// Print the result for each row
+			fmt.Printf("%s: %s\n", q.Title, result)
+		}
+
+		// Check if there was an error iterating over rows
+		if err := rows.Err(); err != nil {
+			log.Printf("Error iterating over rows for query [%s]: %v", q.Title, err)
+		}
+	}
 }
